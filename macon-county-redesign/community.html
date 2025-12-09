@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community Resources — Macon County NC</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header-->
+    <header class="site-header" role="banner">
+
+        <a href="#maincontent" class="skip-link">Skip to content</a>
+
+        <div class="header-inner">
+
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="img/logo.png" alt="Macon County Seal" class="header-logo">
+            </div>
+
+            <!-- Title -->
+            <div class="title-container">
+                <h1 class="site-title">Macon County NC</h1>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="main-nav" role="navigation">
+                <ul class="nav-list">
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="dropdown">
+                        <a href="services.html">County Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="emergency.html">Emergency Services</a></li>
+                            <li><a href="planning.html">Planning & Permits</a></li>
+                            <li><a href="#">Public Safety</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="departments.html">Departments</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Administration</a></li>
+                            <li><a href="#">Finance</a></li>
+                            <li><a href="#">Parks & Recreation</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="community.html">Community Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Libraries</a></li>
+                            <li><a href="#">Schools</a></li>
+                            <li><a href="#">Senior Services</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                </ul>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <button class="mobile-toggle" aria-label="Open navigation menu">
+                <span class="hamburger"></span>
+            </button>
+
+
+
+        </div>
+
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="mobile-nav" aria-hidden="true">
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li>
+                    <button class="submenu-toggle">County Services</button>
+                    <ul class="submenu">
+                        <li><a href="#">Emergency Services</a></li>
+                        <li><a href="#">Planning & Permits</a></li>
+                        <li><a href="#">Public Safety</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <button class="submenu-toggle">Departments</button>
+                    <ul class="submenu">
+                        <li><a href="#">Administration</a></li>
+                        <li><a href="#">Finance</a></li>
+                        <li><a href="#">Parks & Recreation</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <button class="submenu-toggle">Community Resources</button>
+                    <ul class="submenu">
+                        <li><a href="#">Libraries</a></li>
+                        <li><a href="#">Schools</a></li>
+                        <li><a href="#">Senior Services</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <script>
+    /* Mobile menu toggle */
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileToggle.addEventListener('click', () => {
+        const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+        mobileToggle.setAttribute('aria-expanded', !expanded);
+        mobileMenu.classList.toggle('open');
+    });
+
+    /* Submenu toggles */
+    document.querySelectorAll('.submenu-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.nextElementSibling.classList.toggle('open');
+        });
+    });
+    </script>
+
+
+    <!-- Section Header -->
+    <div class="section-header" style="background-image:url('img/forestriver.jpg');">
+        <h1>Community Resources</h1>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content">
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras at lorem non 
+            diam fermentum tincidunt. Integer gravida purus in luctus posuere.
+        </p>
+
+        <div class="grid grid-3">
+
+            <div class="card">
+                <h3>Libraries</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent 
+                    cursus felis vitae sapien interdum viverra.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Schools</h3>
+                <p>
+                    Morbi finibus, risus id feugiat pellentesque, lacus sapien aliquet 
+                    quam, non fermentum nisl urna eget tortor.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Senior Services</h3>
+                <p>
+                    Vivamus et ipsum vitae mauris condimentum posuere. Vestibulum 
+                    aliquet dui quis lectus pretium.
+                </p>
+            </div>
+
+        </div>
+
+        <h2>Community Programs</h2>
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac tortor 
+            vitae tortor posuere suscipit. Nulla facilisi. Etiam nec luctus ligula.
+        </p>
+
+    </main>
+
+    <!-- Footer  -->
+    <footer class="site-footer" role="contentinfo">
+
+        <div class="footer-inner">
+
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>Macon County NC<br>
+                5 West Main Street<br>
+                Franklin, NC 28734<br>
+                Phone: (828) 524-2121</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Departments</h3>
+                <ul>
+                    <li><a href="#">Administration</a></li>
+                    <li><a href="#">Finance</a></li>
+                    <li><a href="#">Parks & Recreation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> Macon County NC — All Rights Reserved</p>
+        </div>
+
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+
+</body>
+</html>

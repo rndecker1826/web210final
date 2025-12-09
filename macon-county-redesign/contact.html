@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us — Macon County NC</title>
+    <meta name="description" content="Contact Macon County NC offices including phone numbers, addresses, email contacts, and an online inquiry form.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Macon County NC">
+
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header-->
+    <header class="site-header" role="banner">
+
+        <a href="#maincontent" class="skip-link">Skip to content</a>
+
+        <div class="header-inner">
+
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="img/logo.png" alt="Macon County Seal" class="header-logo">
+            </div>
+
+            <!-- Title -->
+            <div class="title-container">
+                <h1 class="site-title">Macon County NC</h1>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="main-nav" role="navigation">
+                <ul class="nav-list">
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li class="dropdown">
+                        <a href="services.html">County Services</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Emergency Services</a></li>
+                            <li><a href="#">Planning & Permits</a></li>
+                            <li><a href="#">Public Safety</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="departments.html">Departments</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Administration</a></li>
+                            <li><a href="#">Finance</a></li>
+                            <li><a href="#">Parks & Recreation</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="community.html">Community Resources</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Libraries</a></li>
+                            <li><a href="#">Schools</a></li>
+                            <li><a href="#">Senior Services</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+
+                </ul>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <button class="mobile-toggle" aria-label="Open navigation menu">
+                <span class="hamburger"></span>
+            </button>
+
+
+        </div>
+
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="mobile-nav" aria-hidden="true">
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+
+                <li>
+                    <button class="submenu-toggle">County Services</button>
+                    <ul class="submenu">
+                        <li><a href="emergency.html">Emergency Services</a></li>
+                        <li><a href="planning.html">Planning & Permits</a></li>
+                        <li><a href="#">Public Safety</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <button class="submenu-toggle">Departments</button>
+                    <ul class="submenu">
+                        <li><a href="#">Administration</a></li>
+                        <li><a href="#">Finance</a></li>
+                        <li><a href="#">Parks & Recreation</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <button class="submenu-toggle">Community Resources</button>
+                    <ul class="submenu">
+                        <li><a href="#">Libraries</a></li>
+                        <li><a href="#">Schools</a></li>
+                        <li><a href="#">Senior Services</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="events.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+
+    <script>
+    /* Mobile menu toggle */
+    const mobileToggle = document.querySelector('.mobile-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileToggle.addEventListener('click', () => {
+        const expanded = mobileToggle.getAttribute('aria-expanded') === 'true';
+        mobileToggle.setAttribute('aria-expanded', !expanded);
+        mobileMenu.classList.toggle('open');
+    });
+
+    /* Submenu toggles */
+    document.querySelectorAll('.submenu-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.nextElementSibling.classList.toggle('open');
+        });
+    });
+    </script>
+
+    <!-- Section Header -->
+    <div class="section-header" style="background-image:url('img/forestriver.jpg');">
+        <h1>Contact Us</h1>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content">
+
+        <p>
+            If you have questions or need assistance, please use the form below or contact
+            one of the departments directly.
+        </p>
+
+        <!-- Contact Form  -->
+        <section class="contact-card">
+
+            <h2>Contact Us</h2>
+
+            <form action="#" method="post" class="contact-form">
+
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="inquiry">Inquiry Type</label>
+                    <select id="inquiry" name="inquiry">
+                        <option>General Question</option>
+                        <option>Permits</option>
+                        <option>Events</option>
+                        <option>Departments</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    Send Message
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="dept-contacts">
+
+            <h2>Department Contacts</h2>
+
+            <div class="dept-grid">
+
+                <div class="dept-card">
+                    <h3>Administration</h3>
+                    <p>
+                        Phone: (828) 555-1010<br>
+                        Email: admin@maconnc.gov
+                    </p>
+                </div>
+
+                <div class="dept-card">
+                    <h3>Finance</h3>
+                    <p>
+                        Phone: (828) 555-2020<br>
+                        Email: finance@maconnc.gov
+                    </p>
+                </div>
+
+                <div class="dept-card">
+                    <h3>Parks & Recreation</h3>
+                    <p>
+                        Phone: (828) 555-3030<br>
+                        Email: parks@maconnc.gov
+                    </p>
+                </div>
+
+                <div class="dept-card">
+                    <h3>Planning & Permits</h3>
+                    <p>
+                        Phone: (828) 555-4040<br>
+                        Email: permits@maconnc.gov
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="map-section">
+            <h2>Find Us</h2>
+
+            <div class="map-wrapper">
+                <iframe
+                    title="Map showing Macon County Courthouse location"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3228.772615932344!2d-83.406077!3d35.326927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x885a2a6bd5d1e1eb%3A0x86d8b46f2df2a2e2!2sMacon%20County%20Courthouse!5e0!3m2!1sen!2sus!4v1680000000000"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </section>
+
+
+    </main>
+
+    <!-- Footer  -->
+    <footer class="site-footer" role="contentinfo">
+
+        <div class="footer-inner">
+
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <p>Macon County NC<br>
+                5 West Main Street<br>
+                Franklin, NC 28734<br>
+                Phone: (828) 524-2121</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Departments</h3>
+                <ul>
+                    <li><a href="#">Administration</a></li>
+                    <li><a href="#">Finance</a></li>
+                    <li><a href="#">Parks & Recreation</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> Macon County NC — All Rights Reserved</p>
+        </div>
+
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
